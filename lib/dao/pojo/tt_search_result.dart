@@ -1,35 +1,3 @@
-/// ErrCode : 0
-/// ErrMsg : null
-/// Datas : T
-
-class TtSearchResultResponse {
-  int _ErrCode;
-  dynamic _ErrMsg;
-  List<TtSearchResult> _Datas;
-
-  int get ErrCode => _ErrCode;
-  dynamic get ErrMsg => _ErrMsg;
-  List<TtSearchResult> get Datas => _Datas;
-
-  TtSearchResultResponse(this._ErrCode, this._ErrMsg, this._Datas);
-
-  TtSearchResultResponse.map(dynamic obj) {
-    this._ErrCode = obj["ErrCode"];
-    this._ErrMsg = obj["ErrMsg"];
-    this._Datas = obj["Datas"].map<TtSearchResult>((result){
-      return TtSearchResult.map(result);
-    }).toList();
-  }
-
-  Map<String, dynamic> toMap() {
-    var map = new Map<String, dynamic>();
-    map["ErrCode"] = _ErrCode;
-    map["ErrMsg"] = _ErrMsg;
-    map["Datas"] = _Datas;
-    return map;
-  }
-}
-
 /// _id : "270002"
 /// CODE : "270002"
 /// NAME : "广发稳健增长混合"

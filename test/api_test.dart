@@ -11,8 +11,8 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   test('Counter increments smoke test', () async {
-    TtSearchResultResponse response = await ttApi.search('270002');
+    TtSearchResult response = await ttApi.search('270002');
     print(response);
-    expect(response.runtimeType, TtSearchResultResponse);
+    expect(response.runtimeType, TtSearchResult);
   });
 }
